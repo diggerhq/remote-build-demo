@@ -1,19 +1,24 @@
-# Travellist - Laravel Demo App
+# A demo app to showcase Digger Remote Build
 
-This is a Laravel demo application created for our Laravel at Scale series. 
+Simple Laravel app forked from [travellist-laravel-demo](https://github.com/do-community/travellist-laravel-demo)
 
-The branch `tutorial-02` covers containerizing the application to run it with Docker containers.
+## Problem
 
-Once you have Docker and Docker Compose installed, you can get this environment up and running with:
+Docker builds take long on unstable connections due to large image size
+
+## Solution
+Digger supports remote Docker build and push! Only your code is transmitted over the network, everything else happens in ultra-fast Amazon data centers.
 
 ```
-docker-compose build app
-docker-compose up -d
+dg env build <myenv> --remote
 ```
 
-## Tutorials in this Series:
+```
+dg env push <myenv> --remote
+```
 
-- [How to Install and Configure Laravel with LEMP on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-laravel-with-lemp-on-ubuntu-18-04)
-- [Containerizing a Laravel 6 Application for Development with Docker Compose on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/containerizing-a-laravel-6-application-for-development-with-docker-compose-on-ubuntu-18-04)
+## Learn more
 
+Get scalable infrastructure in one click – with Digger your team can fully focus on the product, and you still get all the benefits of AWS / GCP such as free credits.
 
+[learn.digger.dev](https://learn.digger.dev) 
